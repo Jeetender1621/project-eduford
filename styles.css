@@ -22,14 +22,14 @@ nav{
     justify-content: space-between;
 }
 nav a{
-    width: 50%;
+    width: 30%;
 }
 nav img{
     width: 150px;
 }
 
 .nav-links{
-    width: 50%;
+    width: 70%;
 }
 
 .nav-links ul{
