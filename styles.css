@@ -100,7 +100,260 @@ nav img{
     transition: 0.5s;
 }
 
-@media screen and (max-width:700px){
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.course h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.course p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.course-col{
+    flex-basis: 30%;
+    background: rgba(229, 100, 132, 0.216);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+}
+
+.course-col h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.course-col:hover{
+    box-shadow:  0 0 20px 0px rgba(0,0, 0, 0.2);
+}
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.campus h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.campus p{
+    color: #777;
+    font-size: 14px;
+}
+   
+    
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.campus-col img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease;
+
+}
+
+.red-layer:hover{
+    background: rgba(226, 0, 0, 0.525);
+}
+
+.green-layer:hover {
+    background: rgba(0, 226, 0, 0.525);
+  }
+  
+.blue-layer:hover {
+    background: rgba(0, 0, 226, 0.525);
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+}
+
+.layer:hover h3{
+    bottom: 50%;
+    opacity: 1;
+}
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.facilities h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.facilities p{
+    color: #777;
+    font-size: 14px;
+}
+
+.facilities-col{
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+}
+
+.facilities-col img{
+    width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.facilities-col p{
+    padding: 0;
+}
+
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+}
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.testimonials h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.testimonials p{
+    color: #777;
+    font-size: 14px;
+}
+
+.testimonials-col{
+    flex-basis: 40%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: center;
+    background-color: rgba(229, 100, 132, 0.216);
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    gap:20px
+}
+
+.testimonials-col img{
+   height: 60px;
+   margin-left: 5px;
+   margin-right: 30px;
+   border-radius: 50%;
+   align-self: center;
+}
+
+.testimonials-col p{
+    padding: 0;
+    text-align: left;
+}
+
+.testimonials-col h3{
+    margin-top: 15px;
+    text-align:left;
+}
+.star-icon{
+    display: flex;
+    color: #f44336;
+}
+
+.cta{
+    margin: 100px auto;
+    width: 70%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./imgs/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 32px;
+}
+.footer p{
+    padding: 30px;
+    color: #777;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.p-heart{
+    font-size: 14px;
+}
+
+#heart{
+    color: #f44336;
+    font-size: 16px;
+}
+@media screen and (max-width:900px){
     .text-box-header{
         font-size: 20px;
     }
@@ -125,7 +378,15 @@ nav img{
         text-align: end;
         color: #f44336;
     }
-    
+
+    .row{
+        flex-direction: column;
+    }
+
+    #row{
+        display: flex;
+        flex-direction: column;
+    }
     
     .nav-links{
         position: absolute;
@@ -135,7 +396,7 @@ nav img{
         height: 92vh;
         background: rgba(0, 0, 0, 0.761);
         padding: 40px;
-        transition: 0.2s ease;
+        transition: 0.5s ease;
         z-index: 2;
     }
 
@@ -158,10 +419,31 @@ nav img{
     }
 
     .hero-btn{
-        font-size: 8px;
+        font-size: 10px;
+    }
+
+    .testimonials-col{
+        flex-direction: column;
+    }
+    
+    .testimonials-col p{
+        padding: 0;
+        text-align: center;
+    }
+    
+    .testimonials-col h3{
+        margin-top: 15px;
+        text-align:center;
+    }
+
+    .star-icon{
+        justify-content:center;
+    }
+
+    .cta h1{
+        font-size: 18px;
     }
 }
-
 
 @media screen and (max-width:380px){
     .nav-links{
