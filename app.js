@@ -2,14 +2,38 @@ const hamBtn = document.querySelector('.ham-btn');
 const closeBtn = document.querySelector('.close-btn');
 const navLinks = document.querySelector('.nav-links');
 
-hamBtn.addEventListener('click', () =>{
+hamBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    hamBtn.style.display = 'none'; // Hide hamburger icon
-    closeBtn.style.display = 'block'; // Show close icon
+    if (window.innerWidth <= 700) {
+        hamBtn.style.display = 'none'; // Hide hamburger icon
+        closeBtn.style.display = 'block'; // Show close icon
+    }
 });
 
-closeBtn.addEventListener('click', () =>{
+closeBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    hamBtn.style.display = 'block'; // Show hamburger icon
-    closeBtn.style.display = 'none'; // Hide close icon
+    if (window.innerWidth <= 700) {
+        hamBtn.style.display = 'block'; // Show hamburger icon
+        closeBtn.style.display = 'none'; // Hide close icon
+    }
 });
+
+// Add an event listener for window resize to adjust the display of icons
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 700) {
+        // Hide both icons on larger screens
+        hamBtn.style.display = 'none';
+        closeBtn.style.display = 'none';
+    } else {
+        // Show hamburger icon only if navigation links are not active
+        if (!navLinks.classList.contains('active')) {
+            hamBtn.style.display = 'block';
+            closeBtn.style.display = 'none';
+        } else {
+            // Show close icon if navigation links are active
+            hamBtn.style.display = 'none';
+            closeBtn.style.display = 'block';
+        }
+    }
+});
+
